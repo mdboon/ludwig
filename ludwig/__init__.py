@@ -13,9 +13,11 @@
 # limitations under the License.
 # ==============================================================================
 import logging
-import io
+import warnings
 import sys
 
 from ludwig.globals import LUDWIG_VERSION as __version__  # noqa
 
-logging.basicConfig(level=logging.INFO, stream=io.StringIO(), format="%(message)s")
+warnings.filterwarnings('ignore')
+
+# logging.basicConfig(level=logging.INFO, stream=io.StringIO(), format="%(message)s")
